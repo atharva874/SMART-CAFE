@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../../components/Navbar';
-import { Search, ChevronRight, Star } from 'lucide-react';
+import { Search, ChevronRight } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import './Home.css';
 

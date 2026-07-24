@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AdminNavbar from '../../components/AdminNavbar';
 import { useSocket } from '../../context/SocketContext';
-import { Search, Filter, Eye, MapPin, Phone } from 'lucide-react';
+import { Search, Eye, MapPin, Phone } from 'lucide-react';
 import './OrderManagement.css';
 
 const OrderManagement = () => {
@@ -16,6 +16,7 @@ const OrderManagement = () => {
 
   useEffect(() => {
     fetchOrders();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedStatus]);
 
   useEffect(() => {
@@ -33,10 +34,12 @@ const OrderManagement = () => {
         socket.off('order-status-update');
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [socket]);
 
   useEffect(() => {
     filterOrders();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [orders, searchQuery]);
 
   const fetchOrders = async () => {

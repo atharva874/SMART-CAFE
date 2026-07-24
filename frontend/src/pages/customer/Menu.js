@@ -22,6 +22,7 @@ const Menu = () => {
 
   useEffect(() => {
     filterFoods();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [foods, selectedCategory, searchQuery]);
 
   const fetchData = async () => {

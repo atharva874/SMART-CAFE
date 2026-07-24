@@ -12,7 +12,11 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://cafe-ordering-system.vercel.app", // Add your actual Vercel URL here
+      "https://your-custom-domain.com" // Add your custom domain if you have one
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   }
@@ -20,7 +24,11 @@ const io = socketIo(server, {
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://cafe-ordering-system.vercel.app", // Add your actual Vercel URL here
+    "https://your-custom-domain.com" // Add your custom domain if you have one
+  ],
   credentials: true
 }));
 app.use(express.json());
