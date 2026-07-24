@@ -14,8 +14,7 @@ const io = socketIo(server, {
   cors: {
     origin: [
       "http://localhost:3000",
-      "https://cafe-ordering-system.vercel.app", // Add your actual Vercel URL here
-      "https://your-custom-domain.com" // Add your custom domain if you have one
+      "https://smart-cafe-psi.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
@@ -26,8 +25,7 @@ const io = socketIo(server, {
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://cafe-ordering-system.vercel.app", // Add your actual Vercel URL here
-    "https://your-custom-domain.com" // Add your custom domain if you have one
+    "https://smart-cafe-psi.vercel.app"
   ],
   credentials: true
 }));
